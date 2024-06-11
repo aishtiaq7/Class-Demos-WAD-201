@@ -5,28 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SASS Features Demonstration</title>
   <link rel="stylesheet" href="css/styles.css">
-  <style>
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .box {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100px;
-      height: 100px;
-      background-color: #85c1e9;
-      color: white;
-      text-align: center;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-    .box:hover {
-      background-color: #5dade2;
-    }
-  </style>
 </head>
 <body>
 
@@ -36,45 +14,16 @@
     <div class="nav-item"><a class="nav-item-link" href="#">Contact</a></div>
   </nav>
 
-  <div class="container">
+  <button class="button">Hover me</button>
 
-    <div class="card card--primary">
-      <h2>Pseudo-classes and Pseudo-elements</h2>
-      <button class="button">Hover me</button>
-    </div>
+  <div class="card">Normal Card</div>
+  <div class="card card--large">Large Card</div>
+  <div class="card is-active">Active Card</div>
 
-    <div class="card card--secondary">
-      <h2>Modifiers and States</h2>
-      <div class="card">Normal Card</div>
-      <div class="card card--large">Large Card</div>
-      <div class="card is-active">Active Card</div>
-    </div>
+  <div class="container">Responsive Container below 600px </div>
 
-    <div class="card">
-      <h2>Nested Elements</h2>
-      <nav class="nav">
-        <div class="nav-item"><a class="nav-item-link" href="#">Home</a></div>
-        <div class="nav-item"><a class="nav-item-link" href="#">About</a></div>
-        <div class="nav-item"><a class="nav-item-link" href="#">Contact</a></div>
-      </nav>
-    </div>
-
-    <div class="card card--primary">
-      <h2>Media Queries</h2>
-      <div class="container">
-        <div class="box">Box 1</div>
-        <div class="box">Box 2</div>
-        <div class="box">Box 3</div>
-      </div>
-    </div>
-
-    <div class="card card--secondary">
-      <h2>Contextual Styling</h2>
-      <div class="alert alert-success">Success Alert</div>
-      <div class="alert alert-error">Error Alert</div>
-    </div>
-
-  </div>
+  <div class="alert alert-success">Success Alert</div>
+  <div class="alert alert-error">Error Alert</div>
 
 </body>
 </html>

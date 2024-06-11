@@ -1,82 +1,34 @@
-// SCSS - Ampersand Operator
+/* SCSS - Ampersand Operator */
 
-// Nav component with nested elements
-.nav {
-  background-color: #333;
-  color: #fff;
+// Targeting child elements
+.target {
+  color: blue;
   padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
 
-  .nav-item {
-    display: inline-block;
-    margin-right: 10px;
-
-    &-link {
-      color: #fff;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline; // Refers to .nav-item-link:hover
-        background-color: pink;
-      }
-    }
+  .child {
+    color: red; // Refers to .target .child
+    background-color: yellow; // Makes the child element's background color easily visible
+    padding: 5px;
+    margin-top: 5px;
   }
-}
-
-// Button styles with pseudo-class and pseudo-element
-.button {
-  color: white;
-  background-color: blue;
-  padding: 10px;
 
   &:hover {
-    background-color: darkblue; // Refers to .button:hover
-  }
-
-  &::after {
-    content: "→"; // Refers to .button::after
-    padding-left: 5px;
+    background-color: lightblue; // Refers to .target:hover
   }
 }
 
-// Card component with modifiers and states
-.card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  padding: 20px;
-
-  &--large {
-    padding: 40px; // Refers to .card--large
+// Targeting sibling elements
+#mainTarget {
+  & ~ .target {
+    background-color: antiquewhite;
+    border-top: 12px solid blue; // Refers to .target ~ .target (subsequent siblings .target)
   }
 
-  &.is-active {
-    border-color: blue; // Refers to .card.is-active
-  }
-}
-
-// Responsive container using media queries
-.container {
-  width: 100%;
-  padding: 20px;
-
-  @media (max-width: 600px) {
-    & {
-      background-color: lightsalmon;
-      padding: 10px; // Refers to .container with media query
-    }
-  }
-}
-
-// Alert component with contextual styling
-.alert {
-  padding: 20px;
-  border-radius: 5px;
-  color: white;
-
-  &.alert-success {
-    background-color: green; // Refers to .alert.alert-success
-  }
-
-  &.alert-error {
-    background-color: red; // Refers to .alert.alert-error
+  & + .target {
+    margin-top: 20px; // Refers to .target + .target (next sibling .target)
+    border-top: 2px solid yellowgreen;
+    background-color: pink;
   }
 }

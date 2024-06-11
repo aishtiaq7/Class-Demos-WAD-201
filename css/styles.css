@@ -1,66 +1,26 @@
-@charset "UTF-8";
-.nav {
-  background-color: #333;
-  color: #fff;
+/* SCSS - Ampersand Operator */
+.target {
+  color: blue;
   padding: 10px;
-}
-.nav .nav-item {
-  display: inline-block;
-  margin-right: 10px;
-}
-.nav .nav-item-link {
-  color: #fff;
-  text-decoration: none;
-}
-.nav .nav-item-link:hover {
-  text-decoration: underline;
-  background-color: pink;
-}
-
-.button {
-  color: white;
-  background-color: blue;
-  padding: 10px;
-}
-.button:hover {
-  background-color: darkblue;
-}
-.button::after {
-  content: "→";
-  padding-left: 5px;
-}
-
-.card {
-  background-color: #fff;
   border: 1px solid #ddd;
-  padding: 20px;
+  margin-bottom: 10px;
 }
-.card--large {
-  padding: 40px;
+.target .child {
+  color: red;
+  background-color: yellow;
+  padding: 5px;
+  margin-top: 5px;
 }
-.card.is-active {
-  border-color: blue;
-}
-
-.container {
-  width: 100%;
-  padding: 20px;
-}
-@media (max-width: 600px) {
-  .container {
-    background-color: lightsalmon;
-    padding: 10px;
-  }
+.target:hover {
+  background-color: lightblue;
 }
 
-.alert {
-  padding: 20px;
-  border-radius: 5px;
-  color: white;
+#mainTarget ~ .target {
+  background-color: antiquewhite;
+  border-top: 12px solid blue;
 }
-.alert.alert-success {
-  background-color: green;
-}
-.alert.alert-error {
-  background-color: red;
+#mainTarget + .target {
+  margin-top: 20px;
+  border-top: 2px solid yellowgreen;
+  background-color: pink;
 }/*# sourceMappingURL=styles.css.map */

@@ -3,27 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SASS Features Demonstration</title>
+  <title>SCSS Ampersand Operator Example</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <nav class="nav">
-    <div class="nav-item"><a class="nav-item-link" href="#">Home</a></div>
-    <div class="nav-item"><a class="nav-item-link" href="#">About</a></div>
-    <div class="nav-item"><a class="nav-item-link" href="#">Contact</a></div>
-  </nav>
-
-  <button class="button">Hover me</button>
-
-  <div class="card">Normal Card</div>
-  <div class="card card--large">Large Card</div>
-  <div class="card is-active">Active Card</div>
-
-  <div class="container">Responsive Container below 600px </div>
-
-  <div class="alert alert-success">Success Alert</div>
-  <div class="alert alert-error">Error Alert</div>
+  <div class="container">
+    <div id="mainTarget" class="target">First Target
+      <div class="child">Child of First Target</div>
+    </div>
+    <div class="target">Second Target</div>
+    <div class="target">Third Target</div>
+    <div class="target">Fourth Target</div>
+  </div>
 
 </body>
 </html>

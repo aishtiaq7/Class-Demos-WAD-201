@@ -1,0 +1,115 @@
+/* styles.scss */
+
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$text-color: #333;
+$border-radius: 5px;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin box-shadow($shadow) {
+  box-shadow: $shadow;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: $text-color;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: $border-radius;
+  padding: 20px;
+  margin-bottom: 20px;
+  @include box-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+
+  &--primary {
+    border-left: 5px solid $primary-color;
+  }
+
+  &--secondary {
+    border-left: 5px solid $secondary-color;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
+.button {
+  color: white;
+  background-color: $primary-color;
+  padding: 10px 20px;
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+
+  &::after {
+    content: " →";
+  }
+}
+
+.nav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+
+  .nav-item {
+    display: inline-block;
+    margin-right: 10px;
+
+    &-link {
+      color: #fff;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.alert {
+  padding: 20px;
+  border-radius: $border-radius;
+  color: white;
+  margin-bottom: 20px;
+
+  &.alert-success {
+    background-color: $secondary-color;
+  }
+
+  &.alert-error {
+    background-color: red;
+  }
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: lighten($primary-color, 20%);
+  margin: 20px;
+  @include flex-center;
+
+  &:hover {
+    background-color: lighten($primary-color, 10%);
+  }
+}

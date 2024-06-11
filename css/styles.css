@@ -1,0 +1,91 @@
+@charset "UTF-8";
+/* styles.scss */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card--primary {
+  border-left: 5px solid #3498db;
+}
+.card--secondary {
+  border-left: 5px solid #2ecc71;
+}
+.card h2 {
+  margin-top: 0;
+}
+
+.button {
+  color: white;
+  background-color: #3498db;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.button:hover {
+  background-color: #217dbb;
+}
+.button::after {
+  content: " →";
+}
+
+.nav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.nav .nav-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.nav .nav-item-link {
+  color: #fff;
+  text-decoration: none;
+}
+.nav .nav-item-link:hover {
+  text-decoration: underline;
+}
+
+.alert {
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+  margin-bottom: 20px;
+}
+.alert.alert-success {
+  background-color: #2ecc71;
+}
+.alert.alert-error {
+  background-color: red;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #8bc4ea;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box:hover {
+  background-color: #5faee3;
+}/*# sourceMappingURL=styles.css.map */

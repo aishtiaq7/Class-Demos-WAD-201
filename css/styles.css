@@ -60,7 +60,7 @@
   width: 0;
   height: 100%;
   background-color: green;
-  animation: load 3s forwards;
+  animation: load 3s ease-in-out 2s infinite alternate both running;
 }
 
 @keyframes load {

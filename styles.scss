@@ -12,6 +12,8 @@ $animation-duration: 4s;
   height: 50vh;
   border: 2px solid black;
 }
+
+
 .circle {
   width: $circle-size;
   height: $circle-size;
@@ -27,7 +29,6 @@ $animation-duration: 4s;
   }
   animation: move-square $animation-duration infinite;
 }
-
 @keyframes move-square {
   0% {
     top: 0px;
@@ -62,7 +63,7 @@ $animation-duration: 4s;
     width: 0;
     height: 100%;
     background-color: green;
-    animation: load 3s forwards;
+    animation: load 3s ease-in-out 2s infinite alternate both running;
   }
 }
 
